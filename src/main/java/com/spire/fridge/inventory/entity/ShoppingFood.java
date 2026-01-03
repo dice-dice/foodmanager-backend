@@ -1,5 +1,6 @@
 package com.spire.fridge.inventory.entity;
 
+import com.spire.fridge.inventory.classification.LifeCategory;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
@@ -25,6 +26,18 @@ public class ShoppingFood {
 
     private LocalDate date;
 
+    public LifeCategory getLifeCategory() {
+        return lifeCategory;
+    }
+
+    public void setLifeCategory(LifeCategory lifeCategory) {
+        this.lifeCategory = lifeCategory;
+    }
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "life_category", length = 20)
+    private LifeCategory lifeCategory;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
@@ -33,6 +46,7 @@ public class ShoppingFood {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
+
 
     public ShoppingFood() {
 

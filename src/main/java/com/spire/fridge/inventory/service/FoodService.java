@@ -1,4 +1,4 @@
-package com.spire.fridge.inventory.security.services;
+package com.spire.fridge.inventory.service;
 
 import com.spire.fridge.inventory.entity.Category;
 import com.spire.fridge.inventory.entity.Food;

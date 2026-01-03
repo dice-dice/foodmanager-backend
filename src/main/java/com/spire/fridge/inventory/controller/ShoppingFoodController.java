@@ -2,12 +2,11 @@ package com.spire.fridge.inventory.controller;
 
 import com.spire.fridge.inventory.dto.food.FoodDTO;
 import com.spire.fridge.inventory.entity.Category;
-import com.spire.fridge.inventory.entity.Food;
 import com.spire.fridge.inventory.entity.ShoppingFood;
 import com.spire.fridge.inventory.entity.User;
 import com.spire.fridge.inventory.repository.CategoryRepository;
 import com.spire.fridge.inventory.repository.UserRepository;
-import com.spire.fridge.inventory.security.services.ShoppingFoodService;
+import com.spire.fridge.inventory.service.ShoppingFoodService;
 import com.spire.fridge.inventory.security.services.UserDetailsImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

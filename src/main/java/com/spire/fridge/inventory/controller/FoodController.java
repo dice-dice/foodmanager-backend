@@ -6,17 +6,14 @@ import com.spire.fridge.inventory.entity.Food;
 import com.spire.fridge.inventory.entity.User;
 import com.spire.fridge.inventory.repository.CategoryRepository;
 import com.spire.fridge.inventory.repository.UserRepository;
-import com.spire.fridge.inventory.security.services.FoodService;
+import com.spire.fridge.inventory.service.FoodService;
 import com.spire.fridge.inventory.security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
