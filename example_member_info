@@ -1,0 +1,20 @@
+username: "daisuke"
+password: "dai1003"
+role: "admin","user"
+
+
+username: "daiya"
+password: "yamai0527"
+role: "user"
+
+username:"tonozaki"
+password: "tono321a"
+role: "user"
+
+username:"saburo"
+password:"saburo326"
+role:"user"
+
+username:"dodon"
+password:"test123"
+role:"user"
