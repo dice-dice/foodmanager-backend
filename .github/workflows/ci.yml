@@ -24,3 +24,4 @@ jobs:
         run: mvn -B clean test
         env:
           SPRING_PROFILES_ACTIVE: test
+　　　　　　JWT_SECRET: ${{ secrets.JWT_SECRET }}
