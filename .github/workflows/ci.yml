@@ -22,3 +22,5 @@ jobs:
 
       - name: Build and test
         run: mvn -B clean test
+        env:
+          SPRING_PROFILES_ACTIVE: test
