@@ -1,5 +1,6 @@
 package com.spire.fridge.inventory.service;
 
+import com.spire.fridge.inventory.classification.LifeCategory;
 import com.spire.fridge.inventory.entity.Category;
 import com.spire.fridge.inventory.entity.Food;
 import com.spire.fridge.inventory.entity.ShoppingFood;
@@ -45,4 +46,26 @@ public class ShoppingFoodService {
     public void delete(Long shoppingFoodId) {
         shoppingFoodRepository.deleteById(shoppingFoodId);
     }
+
+    public ShoppingFood createFood(
+            String name,
+            int quantity,
+            User user,
+            LifeCategory lifeCategory
+    ){
+        ShoppingFood food = new ShoppingFood();
+        food.setName(name);
+        food.setQuantity(quantity);
+        food.setUser(user);
+        food.setLifeCategory(lifeCategory);
+        return shoppingFoodRepository.save(food);
+    }
+
+    public List<ShoppingFood> getShoppingFoodByUserAndLifeCategory(
+            User user,
+            LifeCategory lifeCategory
+    ) {
+        return shoppingFoodRepository.findByUserAndLifeCategory(user, lifeCategory);
+    }
+
 }

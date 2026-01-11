@@ -26,13 +26,6 @@ public class ShoppingFood {
 
     private LocalDate date;
 
-    public LifeCategory getLifeCategory() {
-        return lifeCategory;
-    }
-
-    public void setLifeCategory(LifeCategory lifeCategory) {
-        this.lifeCategory = lifeCategory;
-    }
 
     @Enumerated(EnumType.STRING)
     @Column(name = "life_category", length = 20)
@@ -105,5 +98,13 @@ public class ShoppingFood {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public LifeCategory getLifeCategory() {
+        return lifeCategory;
+    }
+
+    public void setLifeCategory(LifeCategory lifeCategory) {
+        this.lifeCategory = lifeCategory;
     }
 }
