@@ -35,3 +35,7 @@ build/
 ### application-{profiles}.properties
 application-local.properties
 application-prod.properties
+
+
+#export
+.env
