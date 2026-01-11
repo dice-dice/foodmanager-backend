@@ -51,16 +51,6 @@ public class FoodController {
         return foodDTO;
     }
 
-//    @RequestMapping(value = {"/by-user", "/by-category/{userId}/{categoryId}", "/food-stock", "/food-update", "/food-delete/{id}"}, method = RequestMethod.OPTIONS)
-//    public ResponseEntity<?> handleOptions() {
-//        HttpHeaders headers = new HttpHeaders();
-//        headers.add("Access-Control-Allow-Origin", "http://localhost:3000");
-//        headers.add("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE, OPTIONS");
-//        headers.add("Access-Control-Allow-Headers", "Content-Type, Authorization");
-//
-//        return new ResponseEntity<>(null, headers, HttpStatus.NO_CONTENT);
-//    }
-
     @GetMapping("/by-user")
     public ResponseEntity<List<FoodDTO>> getFoodByUser(@AuthenticationPrincipal UserDetailsImpl userDetails) {
         if (userDetails == null) {
@@ -93,7 +83,6 @@ public class FoodController {
         List<FoodDTO> foodDTOList = foodList.stream().map(this::mapToDTO).collect(Collectors.toList());
         return new ResponseEntity<>(foodDTOList,HttpStatus.OK);
     }
-
 
     @PostMapping("/food-stock")
     public ResponseEntity<List<Food>> foodStock(
