@@ -28,6 +28,8 @@ public class Food {
 
     private LocalDate date;
 
+    private LocalDate expirationDate;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
@@ -102,5 +104,13 @@ public class Food {
 
     public void setCategory(Category category) {
         this.category = category;
+    }
+
+    public LocalDate getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(LocalDate expirationDate) {
+        this.expirationDate = expirationDate;
     }
 }

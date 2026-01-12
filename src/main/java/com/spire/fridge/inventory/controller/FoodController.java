@@ -42,6 +42,7 @@ public class FoodController {
         foodDTO.setName(food.getName());
         foodDTO.setQuantity(food.getQuantity());
         foodDTO.setDate(food.getDate());
+        foodDTO.setExpirationDate(food.getExpirationDate());
         Category category = food.getCategory();
         if (category != null) {
             foodDTO.setCategoryId(category.getId());
@@ -105,6 +106,7 @@ public class FoodController {
             food.setName(foodDTO.getName());
             food.setQuantity(foodDTO.getQuantity());
             food.setDate(foodDTO.getDate());
+            food.setExpirationDate(foodDTO.getExpirationDate());
             food.setUser(currentUser);
 
             Long categoryId = foodDTO.getCategoryId();
@@ -151,7 +153,7 @@ public class FoodController {
                     existingFood.setName(foodDTO.getName());
                     existingFood.setQuantity(foodDTO.getQuantity());
                     existingFood.setDate(foodDTO.getDate());
-
+                    existingFood.setExpirationDate(foodDTO.getExpirationDate());
 
                     Long categoryId = foodDTO.getCategoryId();
                     if (categoryId != null) {

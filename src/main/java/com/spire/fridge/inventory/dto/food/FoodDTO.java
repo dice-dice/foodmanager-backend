@@ -7,6 +7,7 @@ public class FoodDTO {
     private String name;
     private Integer quantity;
     private LocalDate date;
+    private LocalDate expirationDate;
 
     private Long categoryId;
     private String categoryName;
@@ -60,5 +61,13 @@ public class FoodDTO {
 
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
+    }
+
+    public LocalDate getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(LocalDate expirationDate) {
+        this.expirationDate = expirationDate;
     }
 }
