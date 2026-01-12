@@ -21,7 +21,7 @@ public class CategoryInitializer  {
         if (categoryRepository.count() == 0) {
 
             List<String> defaults = List.of(
-                    "果物","野菜","肉","魚","乳製品","冷蔵","冷凍","常温","飲料","日用品","その他"
+                    "冷蔵","冷凍","常温","その他","日用品"
             );
 
             for (String name : defaults) {
