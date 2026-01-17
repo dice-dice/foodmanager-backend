@@ -44,7 +44,8 @@ jobs:
             set -e
             git config --global --add safe.directory /home/daisuke/food-manager-v2/backend
             cd /home/daisuke/food-manager-v2/backend
-            git pull origin main
+            git fetch origin main
+            git reset --hard origin/main
             cd /home/daisuke/food-manager-v2
             docker compose up -d --build
           EOF
