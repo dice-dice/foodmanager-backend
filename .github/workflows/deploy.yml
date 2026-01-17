@@ -23,8 +23,8 @@ jobs:
         run: |
           ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'EOF'
             set -e
-            cd $HOME/food-manager-v2/backend
+            cd /home/daisuke/food-manager-v2/backend
             git pull origin main
-            cd $HOME/food-manager-v2
+            cd /home/daisuke/food-manager-v2
             docker compose up -d --build
           EOF
